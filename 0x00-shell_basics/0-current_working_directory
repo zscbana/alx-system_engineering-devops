@@ -1,5 +1,3 @@
-#!/bin/bas
+#!/bin/bash
 current.dir=$(pwd)
-echo $current.dir
-
-
+echo "This is the working dir :current.dir"
