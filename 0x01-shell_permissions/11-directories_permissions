@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -R u=rw,go=r .
+find . -type d -exec chmod 711 {} +
