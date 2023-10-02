@@ -1,2 +1,3 @@
 #!/bin/bash
-find . -type f -empty -execdir echo {} \; -or type f -empty -execdir echo {} \;echo
+find . -type d -empty -execdir printf "%s\n" {} \(-or -type f -empty -execdir printf "%s\n" {} \) -execdir echo \(\)
+
