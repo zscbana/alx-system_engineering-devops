@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $PATH | tr -cd ':' | wc -c | xargs -I {} find -mindepth 1 -type d | head -n {}
+find $PATH  -mindepth 1 -type d | wc -l
