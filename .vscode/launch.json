@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/omarelbanna/alx-system_engineering-devops/0x05-processes_and_signals",
+      "program": "/Users/omarelbanna/alx-system_engineering-devops/0x05-processes_and_signals/build/Debug/outDebug"
+    }
+  ]
+}
