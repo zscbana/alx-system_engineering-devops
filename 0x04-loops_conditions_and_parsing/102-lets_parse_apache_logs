@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# parses an Apache log file and displays the IP and HTTP code for each visitor.
+# Format: IP HTTP_CODE
 
-awk '{print $1, $7, $9}' | sort | uniq -c | sort -nr
+awk '{print $1, $9}' apache-access.log
