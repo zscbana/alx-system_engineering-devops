@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# start a TCP server on port 98 of the localhost
+nc -lk localhost 98
