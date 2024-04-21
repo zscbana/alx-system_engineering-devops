@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 # Client configuration file (w/ Puppet)
 
-file { 'etc/ssh/ssh_config':
-	ensure => present,
-	content =>"
-	host*
-	IdentityFile ~/.ssh/school
-	PasswordAuthentication no
-	",
+exec { 'echo':
+  path    => 'usr/bin:/bin',
+  command => 'echo "    IdentityFile ~/.ssh/school\n    PasswordAuthentication no" >> /etc/ssh/ssh_config',
+  returns => [0,1],
 }
