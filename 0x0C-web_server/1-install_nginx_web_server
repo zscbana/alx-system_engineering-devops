@@ -1,8 +1,22 @@
 #!/usr/bin/env bash
-# Installs Nginx 
 
+# Installs Nginx
 sudo apt-get -y update
 sudo apt-get -y install nginx
-echo 'Hello World!' > /var/www/html/index.html
 
-sudo service nginx restart
+# Check if Nginx installation was successful
+if ! sudo apt-get -y install nginx; then
+    echo "Error: Nginx installation failed."
+    exit 1
+fi
+
+# Create index.html with "Hello World!"
+echo 'Hello World!' | sudo tee /var/www/html/index.html >/dev/null
+
+# Restart Nginx
+if ! sudo service nginx restart; then
+    echo "Error: Failed to restart Nginx."
+    exit 1
+fi
+
+echo "Nginx installed and configured successfully."
